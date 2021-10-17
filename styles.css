@@ -1,49 +1,135 @@
 /* universal styles */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400;1,600;1,700;1,800&family=Kalam:wght@300;400;700&family=Raleway:ital,wght@0,400;0,500;0,600;1,200;1,400;1,500&display=swap');
+
 body{
   margin: 0;
+  font-family: 'Raleway', sans-serif;
 }
 /* mobile responsivness */
 header{
   background-image: url("images/header-bg.jpg");
   background-size: cover;
   height: 300px;
-}
-/* toggle button taken example from "w3 schools" */
-.container {
-  display: inline-block;
-  cursor: pointer;
-}
-
-.bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #333;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-.change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-.change .bar2 {opacity: 0;}
-
-.change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
-}
-.navigation img{
-  width: 100px;
+  top: 0;
+  margin-top:-15px;
 }
 .navigation{
   display: flex;
   flex-direction: column;
-  background-color: #fff;
-  //justify-content: space-between;
+  align-items:center;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top:20px;
 }
-nav{
+.navigation-mobile{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  background-color: #000;
+  width: 100%;
+  height: 65px;
+  z-index: 5;
+}
+.logotype{
+  display: flex;
+  color: #fff;
+  align-items: center;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+#logo{
+  width: 80px;
+  border-radius: 50%;
+  margin:0 10px;
+}
+#only-desktop{display: none;}
+#mainNav{
+  transform:translate(100vw);
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: space-around;
+  font-size: 2.5rem;
+  width: 100%;
+  background-color: rgb(0 0 0 / 80%);
+  top:0;
+}
+nav a{
+  text-decoration: none;
+  color: #fff;
+  padding-right: 20px;
+}
+#mainNav.nav-opened{
+  transform:translateX(0);
+  height: 80vh;
+  transition: 0.7s;
+  /*  */
+}
+
+/* toggle button taken example from "w3 schools" */
+#menuToggler {
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 10px;
+
+}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(234 208 23);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.open .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+.open .bar2 {opacity: 0;}
+
+.open .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+/*  end of toggle button */
+
+header p{
+  position: relative;
+  color: #fff;
+  font-weight: bolder;
+  background-color: rgb(0 0 0 / 73%);
+  text-align: center;
+  top: 120px;
+  padding: 20px;
+}
+header a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 600px) {
+  #menuToggler {
+    display: none;
+  }
+  .navigation{
+    flex-direction: row;
+    background-color: #000;
+    height: 65px;
+  }
+  #mainNav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    transform:translateY(0);
+    background-color: #000;
+
+  }
+  #mainNav a{
+    font-size: 1.4rem;
+  }
+
+}
+
+@media only screen and (min-width: 800px) {
+    #only-desktop{display: contents;}
 }
