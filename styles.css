@@ -138,14 +138,17 @@ main{
 }
 .headings h2, .join-us h2{
   background-color: black;
-  padding: 10px;
+  padding: 10px 0;
   margin: 0;
   width: 60%;
   border: 1px solid rgb(234 208 23);
 }
+/* .headings h2, .headings h3{
+  padding: 10px;
+} */
 .headings h3, .about-us h2{
   background-color: rgb(234 208 23);
-  padding: 10px;
+  padding: 10px 0;
   margin: 0;
   color: #000;
   width: 40%;
