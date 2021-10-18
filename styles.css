@@ -254,7 +254,7 @@ button:hover{
 /* footer - contact*/
 
 footer{
-  height: 280px;
+  height: 290px;
   border-top: 1px solid #fff;
   background-color: #000;
   display: flex;
@@ -263,7 +263,7 @@ footer{
   align-items: center;
 }
 footer #logo{
-  margin: 15px;
+  margin: 20px;
 }
 .icons img{
   width: 60px;
